@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 
 function App() {
@@ -10,11 +8,16 @@ function App() {
 
   const addValue = () => {
     console.log('value added', counter);
-    setCounter(counter + 1);
+    if (counter < 20) {
+      setCounter(counter + 1);
+    }
   };
   const removeValue = () => {
     console.log('value added', counter);
-    setCounter(counter - 1);
+
+    if (counter > 0) {
+      setCounter(counter - 1);
+    }
   };
 
   // const addValue = () => {
